@@ -33,7 +33,7 @@
     href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
     rel='stylesheet' type='text/css'>
   <link href="css/clean-blog.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/prism.css" />
 </head>
 
 <body>
@@ -61,6 +61,7 @@
               <a class="dropdown-item" href="post3.html">Post 3</a>
               <a class="dropdown-item" href="post4.html">Post 4</a>
               <a class="dropdown-item" href="post5.html">Post 5</a>
+              <a class="dropdown-item" href="post6.html">Post 6</a>
             </div>
           </li>
           <li class="nav-item">
@@ -92,9 +93,9 @@
   </header>
 
   <!-- Post Content -->
-  <article>
-    <div class="container">
-      <div class="row">
+ 
+    <main id="main" class="container">
+      <article class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <img class="img-fluid" src="img/ch_1.jpg" alt="Image of chipotle.com homepage">
 
@@ -102,52 +103,35 @@
             <h2 class="section-heading">Website accessibility review of <a
                 href="https://www.chipotle.com/">chipotle.com</a></h2>
             <p>
-              In this web accessibility study I examined <a href="https://www.chipotle.com/">chipotle.com</a>. The core
-              purpose of
-              this site is to provide a user interface for customers to place food orders online. My focus for this
-              study was to investigate the user interface and HTML to decipher if the essential tasks of this site could
-              be achieved by someone using accessibility tools.
+              In this web accessibility study I examined <a href="https://www.chipotle.com/">chipotle.com</a>. The core purpose of this site is to provide a user interface for customers to place food orders online. My focus for this study was to investigate the user interface and HTML to decipher if the essential tasks of this site could be achieved by someone using accessibility tools.
             </p>
 
             <section>
               <h2 class="section-heading">Web Accessibility Tools and Standards</h2>
               <p>
-                In order to complete this web accessibility review I consistently referenced the <a
-                  href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG 2.1
-                  standards</a>. The WCAG is a set of guidelines
-                written by the <a href="https://www.w3.org/">World Wide Web Consortium</a> to make the web more
-                inclusive for all
-                users – with or without disabilities.
+                In order to complete this web accessibility review I consistently referenced the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG 2.1 standards</a>. The WCAG is a set of guidelines written by the <a href="https://www.w3.org/">World Wide Web Consortium</a> to make the web more inclusive for all users – with or without disabilities.
               </p>
 
-              <p><strong>The four main principles that must be followed according to the WCAG 2.1 standards
-                  include:</strong></p>
+              <p><strong>The four main principles that must be followed according to the WCAG 2.1 standards include:</strong></p>
               <ol>
                 <li>
-                  <strong>Perceivable:</strong> each block of content is perceivable to those who are visually or
-                  hearing impared
+                  <strong>Perceivable:</strong> each block of content is perceivable to those who are visually or hearing impared
                 </li>
                 <li>
-                  <strong>Operable:</strong> the user interface is efficiently operable by a keyboard (tab key) or a
-                  screen reader
+                  <strong>Operable:</strong> the user interface is efficiently operable by a keyboard (tab key) or a screen reader
                 </li>
                 <li>
-                  <strong>Understandable:</strong> The writing in the site is clear and gives context to the clickable
-                  elements.
+                  <strong>Understandable:</strong> The writing in the site is clear and gives context to the clickable elements.
                 </li>
                 <li>
-                  <strong>Robust:</strong> The site incorporates “best practices” of HTML for all devices and utilizes
-                  <a href="https://www.w3.org/WAI/standards-guidelines/aria/">ARIA</a> attributes to bridge the gap between modern web apps and tools used by those with
-                  disabilities to navigate the web
+                  <strong>Robust:</strong> The site incorporates “best practices” of HTML for all devices and utilizes <a href="https://www.w3.org/WAI/standards-guidelines/aria/">ARIA</a> attributes to bridge the gap between modern web apps and tools used by those with disabilities to navigate the web
                 </li>
               </ol>
 
               <p><strong>The tool I used to investigate:</strong></p>
               <ul>
                 <li>
-                  The <a href="https://wave.webaim.org/">WAVE</a> chrome extension is an extremely useful tool for an
-                  accessibility audit as it indicates where the accessibility errors can be found on the page and
-                  includes clickable icons positioned next them that describe the error in detail and optionally reveal the code for a deeper look.
+                  The <a href="https://wave.webaim.org/">WAVE</a> chrome extension is an extremely useful tool for an accessibility audit as it indicates where the accessibility errors can be found on the page and includes clickable icons positioned next them that describe the error in detail and optionally reveal the code for a deeper look.
                 </li>
               </ul>
 
@@ -156,119 +140,54 @@
             <section>
               <h2 class="section-heading">Accessibility audit</h2>
 
-              <p>For this review I will highlight issues (below) that I thought could be improved upon to make this site
-                more effective for all users. </p>
+              <p>For this review I will highlight issues (below) that I thought could be improved upon to make this site more effective for all users. </p>
 
               <h3>
                 Perceivable
               </h3>
 
               <p>
-                <strong>1.</strong> I noticed while scrolling through the homepage that the food links below the hero
-                image aren’t given
-                sufficient context until they are hovered over. For a mouse user it’s less confusing because as the user
-                hovers over each link (for instance burrito) the hover state reveals the text below that says “order”
-                with an arrow pointing to the right. Unfortunately this is not perceivable to someone who is using a
-                keyboard to navigate the site. If any of these links are focused on with keyboard tools the user only
-                sees a list of food items and isn’t given any context for what will happen if they enter into the link.
-                <strong>Making content available to only one type of user is a hallmark of substandard accessibility
-                  design.</strong>
+                <strong>1.</strong> I noticed while scrolling through the homepage that the food links below the hero image aren’t given sufficient context until they are hovered over. For a mouse user it’s less confusing because as the user hovers over each link (for instance burrito) the hover state reveals the text below that says “order” with an arrow pointing to the right Unfortunately this is not perceivable to someone who is using a keyboard to navigate the site. If any of these links are focused on with keyboard tools the user only sees a list of food items and isn’t given any context for what will happen if they enter into the link. <strong>Making content available to only one type of user is a hallmark of substandard accessibility design.</strong>
               </p>
 
               <p>
-                To remedy this I would add a header above this list of food items that says, “Start your order now.”
-                Although simple, I think this would make it clearer to those who are using a keyboard to navigate the
-                site, so they would have more context to the clickable items without needing to use a mouse.
+                To remedy this I would add a header above this list of food items that says, “Start your order now.”Although simple, I think this would make it clearer to those who are using a keyboard to navigate the site, so they would have more context to the clickable items without needing to use a mouse.
               </p>
 
 
               <img class="img-fluid mt-3" src="img/ch_2.jpg" alt="image of main section with added context">
-              <figcaption class="caption text-muted mb-5">Image of food items section with added header reading, “Start
-                your order now”
+              <figcaption class="caption text-muted mb-5">Image of food items section with added header reading, “Start your order now”
               </figcaption>
 
-              <p><strong>2.</strong> While scrolling through the site I quickly noticed 2 issues in the hero image. The
-                first issue I
-                noticed was with the text that reads, “chipotle delivery kitchen.” <strong>The text is rasterized as an
-                  image
-                  instead of written into the code as live text.</strong> This can cause issues for someone who has
-                specific
-                settings in their web browser to view text at larger sizes or in a specific color that provides adequate
-                color contrast for them to read clearly – when text is an image this is not possible. Fixing this is
-                simple – write the text into the HTML with an &lt;h2&gt; or &lt;h3&gt; before the button, so it doesn’t
-                break the
-                hierarchy, but it will also be customizable for those who need more visual impact. </p>
+              <p><strong>2.</strong> While scrolling through the site I quickly noticed 2 issues in the hero image. The first issue I noticed was with the text that reads, “chipotle delivery kitchen.” <strong>The text is rasterized as an image instead of written into the code as live text.</strong> This can cause issues for someone who has specific settings in their web browser to view text at larger sizes or in a specific color that provides adequate color contrast for them to read clearly – when text is an image this is not possible. Fixing this is simple – write the text into the HTML with an &lt;h2&gt; or &lt;h3&gt; before the button, so it doesn’t break the hierarchy, but it will also be customizable for those who need more visual impact. </p>
 
               <img class="img-fluid mt-3" src="img/ch_3.jpg" alt="image of rasterized text">
-              <figcaption class="caption text-muted mb-5">The Hero image from Chipotle.com with the rasterized text
-                “chipotle delivery kitchen” circled in red
+              <figcaption class="caption text-muted mb-5">The Hero image from Chipotle.com with the rasterized text “chipotle delivery kitchen” circled in red
               </figcaption>
 
-              <p><strong>3.</strong>
-
-                The second issue I found with the hero image is the deliberately small text that reads,<i>“$10
-                  min/$200
-                  max for free delivery, excl. tax. 5/1/20-5/10/20 only (subject to extension/cancellation); Additional
-                  terms apply: chipotle.com/freedelivery</i> below the 'order now' button. It’s tiny! And as a
-                consumer is mostly off-putting to see text this small after the promise of “free delivery.” I don’t
-                really understand the logic in using text this
-                small – <strong>either make the text readable or don’t add it at all.</strong> To fix this issue, I
-                would run the text at the
-                appropriate size for people to read it, ideally at a text size closer to 1 rem.
-
-              </p>
+              <p><strong>3.</strong>The second issue I found with the hero image is the deliberately small text that reads,<i>“$10 min/$200 max for free delivery, excl. tax. 5/1/20-5/10/20 only (subject to extension/cancellation); Additional terms apply: chipotle.com/freedelivery</i> below the 'order now' button. It’s tiny! And as a consumer is mostly off-putting to see text this small after the promise of “free delivery.” I don’t really understand the logic in using text this small – <strong>either make the text readable or don’t add it at all.</strong> To fix this issue, I would run the text at the appropriate size for people to read it, ideally at a text size closer to 1 rem.</p>
 
               <img class="img-fluid mt-3" src="img/ch_4.jpg" alt="image of microscopic text">
-              <figcaption class="caption text-muted mb-5">The Hero image from Chipotle.com with the microscopic text
-                circled in red
+              <figcaption class="caption text-muted mb-5">The Hero image from Chipotle.com with the microscopic text circled in red
               </figcaption>
 
               <p><strong>4.</strong>
 
-                In <a
-                  href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131%2C132%2C242%2C413%2C411#info-and-relationships">section
-                  1.3.1 of the
-                  WCAG</a> they suggest the use of semantic markup. Semantic HTML markup makes it easy for people who
-                use screen
-                readers to feel comfortable “knowing where they are” on a webpage. For instance, because <a
-                  href="https://www.starbucks.com/ ">starbucks.com</a> uses perfect semantic markup – &lt;nav&gt;,
-                &lt;main&gt;, and &lt;footer&gt;– a user who uses a screen reader
-                is given the proper context for their location while they move through a page. In contrast,
-                chipotle.com separates content using &lt;div&gt; and &lt;span&gt;, which doesn’t give screen reader
-                technology enough information to discern which part of the page the user is viewing, making
-                it confusing to navigate. <strong>Imagine driving without street signs – you may eventually get to
-                where you wanted to go, but you could get there a lot faster if you had a reference for your
-                location on every block.</strong>
-
+                In <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131%2C132%2C242%2C413%2C411#info-and-relationships">section 1.3.1 of the WCAG</a> they suggest the use of semantic markup. Semantic HTML markup makes it easy for people who use screen readers to feel comfortable “knowing where they are” on a webpage. For instance, because <a href="https://www.starbucks.com/ ">starbucks.com</a> uses perfect semantic markup – &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt;– a user who uses a screen reader is given the proper context for their location while they move through a page. In contrast, chipotle.com separates content using &lt;div&gt; and &lt;span&gt;, which doesn’t give screen reader technology enough information to discern which part of the page the user is viewing, making it confusing to navigate. <strong>Imagine driving without street signs – you may eventually get to where you wanted to go, but you could get there a lot faster if you had a reference for your location on every block.</strong>
               </p>
 
-              <p>My recommendation for this issue would be to change out the &lt;div&gt; tags with semantic tags and
-                aria labels to give the user more context for their location within each page. </p>
+              <p>My recommendation for this issue would be to change out the &lt;div&gt; tags with semantic tags and aria labels to give the user more context for their location within each page. </p>
 
 
               <img class="img-fluid mt-3" src="img/ch_5.jpg" alt="image of chipotle source code">
-              <figcaption class="caption text-muted mb-5">Image of chipotle.com source code showing &lt;div&gt; and
-                &lt;span&gt; without semantic markup
+              <figcaption class="caption text-muted mb-5">Image of chipotle.com source code showing &lt;div&gt; and &lt;span&gt; without semantic markup
               </figcaption>
 
 
               <h3>Operable</h3>
 
               <p><strong>5.</strong>
-                In order to test how operable <a href="https://www.chipotle.com/">chipotle.com</a> was I used the tab
-                method to move
-                through the links on the homepage. <strong>Unlike <a href="https://www.starbucks.com/">starbucks.com</a> which has incredible
-                accessibility features and is simple to tab through to find what you’re looking for, chipotle.com is
-                seriously flawed.</strong> I would recommend giving it a try @ <a
-                  href="https://www.chipotle.com/">chipotle.com</a>. I found that because of
-                the way it’s improperly coded, the user can only tab through the links in the header and footer of the
-                home page leaving the entire &lt;main&gt; section unusable by people who operate a keyboard to navigate
-                websites. Typically content in the &lt;main&gt; section of a website is valuable real estate and not
-                something the company or person who owns the site wants users to pass up. This is most likely an
-                oversight as I’m sure Chipotle doesn't want to lose customers and revenue because they failed their accessibility
-                test.
-
-
+                In order to test how operable <a href="https://www.chipotle.com/">chipotle.com</a> was I used the tab method to move through the links on the homepage. <strong>Unlike <a href="https://www.starbucks.com/">starbucks.com</a> which has incredible accessibility features and is simple to tab through to find what you’re looking for, chipotle.com is seriously flawed.</strong> I would recommend giving it a try @ <a href="https://www.chipotle.com/">chipotle.com</a>. I found that because of the way it’s improperly coded, the user can only tab through the links in the header and footer of the home page leaving the entire &lt;main&gt; section unusable by people who operate a keyboard to navigate websites. Typically content in the &lt;main&gt; section of a website is valuable real estate and not something the company or person who owns the site wants users to pass up. This is most likely an oversight as I’m sure Chipotle doesn't want to lose customers and revenue because they failed their accessibility test.
               </p>
 
             </section>
@@ -276,18 +195,7 @@
             <section>
               <h2 class="section-heading">Conclusion</h2>
               <p>
-                Overall I think <a href="https://www.chipotle.com/">chipotle.com</a> needs to put in a lot more effort into making their
-                site accessible for all users. When I first visited the site, <strong>as someone who uses a mouse to navigate
-                the web, I assumed that I would find very few accessibility issues – I was able to move around the site
-                easily enough. However, after running a Google dev tools accessibility audit, chipotle.com scored a 55
-                out of 100, illustrating the lack of awareness I have as a mouse user for what makes a site truly
-                accessible.</strong> <a href="https://www.starbucks.com/">starbucks.com</a>, the site I’ve been using as a benchmark, scored a
-                perfect 100. The experience of using the two sites couldn’t be more different when visiting with a
-                screen reader enabled.<a href="https://www.chipotle.com/">chipotle.com</a> is incredibly awkward to use, unlike
-                <a href="https://www.starbucks.com/">starbucks.com</a> which is navigable either way, for all users, like websites should be.
-              </p>
-
-            </section>
+                Overall I think <a href="https://www.chipotle.com/">chipotle.com</a> needs to put in a lot more effort into making their site accessible for all users. When I first visited the site, <strong>as someone who uses a mouse to navigate the web, I assumed that I would find very few accessibility issues – I was able to move around the site easily enough. However, after running a Google dev tools accessibility audit, chipotle.com scored a 55 out of 100, illustrating the lack of awareness I have as a mouse user for what makes a site truly accessible.</strong> <a href="https://www.starbucks.com/">starbucks.com</a>, the site I’ve been using as a benchmark, scored a perfect 100. The experience of using the two sites couldn’t be more different when visiting with a screen reader enabled.<a href="https://www.chipotle.com/">chipotle.com</a> is incredibly awkward to use, unlike <a href="https://www.starbucks.com/">starbucks.com</a> which is navigable either way, for all users, like websites should be.</p></section>
 
 
 
@@ -295,10 +203,9 @@
 
 
 
-        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </main>
 
   <hr>
 
@@ -337,6 +244,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
+  <script src="js/prism.js"></script>
+
 </body>
 
 </html>

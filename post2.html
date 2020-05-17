@@ -33,14 +33,17 @@
     href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
     rel='stylesheet' type='text/css'>
   <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/prism.css" />
 
 </head>
 
 <body>
-
+  <a class="skip-to-content-link" href="#main">
+    Skip to main content
+  </a>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
+    <div class="container zIndex">
       <a class="navbar-brand" href="index.html">Drew Donaghy</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -61,6 +64,7 @@
               <a class="dropdown-item" href="post3.html">Post 3</a>
               <a class="dropdown-item" href="post4.html">Post 4</a>
               <a class="dropdown-item" href="post5.html">Post 5</a>
+              <a class="dropdown-item" href="post6.html">Post 6</a>
             </div>
           </li>
           <li class="nav-item">
@@ -92,13 +96,12 @@
   </header>
 
   <!-- Post Content -->
-  <article>
-    <div class="container">
-      <div class="row">
+<main id="main" class="container">
+   
+      <article class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-
           <section>
-            <h2 class="section-heading">Website usablity test of <a href="https://www.doggoneseattle.org/">Dog Gone
+            <h2 class="section-heading">Website usability test of <a href="https://www.doggoneseattle.org/">Dog Gone
                 Seattle</a></h2>
             <p>
               <a href="https://www.doggoneseattle.org/">Dog Gone Seattle</a> is a non-profit dog rescue, adoption and
@@ -204,10 +207,13 @@
 
 
         </div>
-      </div>
-    </div>
-  </article>
+      </article>
 
+   
+
+ 
+
+</main>
   <hr>
 
   <!-- Footer -->
@@ -215,16 +221,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="https://github.com/apdonaghy">
-                <span class="fa-stack fa-lg">
+              <a aria-label="Git-hub" href="https://github.com/apdonaghy">
+                <span class="fa-stack fa-lg centered">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
-            </li>
-          </ul>
           <p class="copyright text-muted">Copyright &copy; Drew Donaghy 2020</p>
         </div>
       </div>
