@@ -110,7 +110,11 @@
 <h3 class="mt-4">Empty link error</h3>
 <p>After running the WAVE test I was alerted that I had an “empty link.” An empty link is simply a link without text – so essentially a link without a description for what it’s linking to. </p>
 
-<p>In the footer section of my page I have a link to my Github page. Like most web pages I’m only using the icon without text as my link, which most web users will understand is a link to a social media page, as the footer is a typical place to put social logos as links. <strong>However, images as links can be confusing for people who use screen readers because links without text are not given a description when focused on</strong> and the screen reader simply says “link” without any additional information. To fix this issue I went to starbucks.com to take a deeper look at a possible solution – since they have outstanding accessibility features. For their footer social icon (links) they use an aria-label, which worked great on their site when I used a screen reader to test it. I used the exact same method to fix the error on my site and when I used a screen reader to test it, the voice said “github” instead of simply saying “link.” See below for my code example.</p>
+<p>In the footer section of my page I have a link to my Github page. Like most web pages I’m only using the icon without text as my link, which most web users will understand is a link to a social media page, as the footer is a typical place to put social logos as links. <strong>However, images as links can be confusing for people who use screen readers because links without text are not given a description when focused on</strong> and the screen reader simply says “link” without any additional information. To fix this issue I went to starbucks.com to take a deeper look at a possible solution, since they have outstanding accessibility features and have been an excellent resource for me this quarter. For their social icon links in the footer they use an aria-label, which worked great on their site when I used a screen reader to test it. I used the exact same method to fix the error on my site and when I used a screen reader to test it, the voice said “github” instead of simply saying “link.”</p>
+
+<p>I also realized while looking at this section of my code that I had an unnecessary unordered list. I had one item (the github icon) in the list, which I thought might be confusing to someone browsing with a screen reader. For instance the screen reader would announce they are entering the list and expecting a list the user would only find one item. To fix this I deleted the list so it would be clearer that there is only one link present.</p>
+
+<p>See below for my code example.</p>
 
 <p class="mb-0"><strong>HTML</strong></p>
 <pre><code class="language-html">//Original Github icon link code
@@ -178,7 +182,7 @@
   I noticed in my code that I failed to use the &ltmain&gt tag, which alerts screen reader users that they’ve entered the main content of the page and are outside of the header and footer. <strong>Although not ideal, a person using a screen reader may still be able to navigate a page without any semantic markup, but in my experience with screen readers, additional contextual descriptions make navigating more efficient. </strong>
 </p>
 
-<p>Below is a code block that shows the transformation I made to my code to make it more semantically accurate.</p>
+<p>Below is a code block that shows the transformation I made to my code to make it semantically accurate.</p>
 
 <p class="mb-0"><strong>HTML</strong></p>
 <pre><code class="language-html">//original code 
@@ -195,7 +199,7 @@
 </code></pre>  
 <pre><code class="language-html">//semantic code
   
-  &ltmain class="container"&gt
+  &ltmain id="main" class="container"&gt
     &ltarticle class="row"&gt
       &ltdiv class="col-lg-8 col-md-10 mx-auto"&gt
       ...
@@ -214,7 +218,7 @@
 
   <p>The most obvious issue with bootstrap and accessibility are the default colors and text sizes, which can be overridden, by both the user (in the computer’s accessibility settings) or by the developer (by adjusting the css). <strong>There will always be tension between what designers think looks good and what accessibility experts think is acceptable – ideally the designers pay attention to the science behind what works for most people, which would make the web more functional for every user.</strong></p>
 </section>
-<p>Other than the color issues, I think bootstrap does a great job of incorporating accessibility features into their components. For instance in their dropdown component, they have all of the appropriate ARIA attributes to make the links completely accessible by a keyboard, which is actually quite complex logic – logic that a lot of developers are too impatient to deal with.<a href="https://getbootstrap.com/docs/4.0/components/dropdowns/">Documentation to the Bootstrap dropdowns here.</a></p>
+<p>Other than the color issues, I think bootstrap does a great job of incorporating accessibility features into their components. For instance, in their dropdown component they have all of the appropriate ARIA attributes to make the links completely accessible by a keyboard, which is actually quite complex logic – logic that a lot of developers are too impatient to deal with.<a href="https://getbootstrap.com/docs/4.0/components/dropdowns/"> Documentation to the Bootstrap dropdowns here.</a></p>
 
       </div>
     </article>
