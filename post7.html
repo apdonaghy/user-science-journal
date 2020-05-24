@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163426474-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163426474-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>User Science Journal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css " rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/prism.css" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Drew Donaghy</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="post1.html">Post 1</a>
+              <a class="dropdown-item" href="post2.html">Post 2</a>
+              <a class="dropdown-item" href="post3.html">Post 3</a>
+              <a class="dropdown-item" href="post4.html">Post 4</a>
+              <a class="dropdown-item" href="post5.html">Post 5</a>
+              <a class="dropdown-item" href="post6.html">Post 6</a>
+              <a class="dropdown-item" href="post7.html">Post 7</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/brainstorming.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Usability Journal Entry 7</h1>
+            <h2 class="subheading">Google Analytics Study
+            </h2>
+            <span class="meta">Posted by
+              <a href="#">Drew Donaghy</a>
+              on May 24, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+ 
+    <main id="main" class="container">
+      <article class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+       
+            <p>
+              In this week's journal entry I’m going to discuss the process of adding <a href="https://analytics.google.com">Google analytics</a> to this site. I made a list of assumptions about the users of my “user science journal” and will take a deeper look at either confirming or debunking those assumptions using the tools made available by Google Analytics in the sections below.
+            </p>
+
+            <section>
+              <h2 class="section-heading">Setting up Google Analytics</h2>
+              <p>
+                The process for setting up Google Analytics is fairly straightforward although the steps differ depending on the format of the website. This website is static and written in html/css so the process for adding the Google Analytics code block to the head of each page is different from adding it to a Wordpress site. 
+               </p>
+               <p>
+                Adding it to this site was simple  – after creating a new account using the Google Analytics app I was provided with a script tag to place in the head of my document and 24 - 48 hours later I started receiving user data on my Google Analytics dashboard.
+                </p>
+                <img class="img-fluid mt-3" src="img/ga_1.png" alt="screenshot of google anylitics generated head-tag code block">
+              </section>
+
+              <section>
+                <h2 class="section-heading">Analytics</h2>
+                <h3 class="mt-4">Guesses about site before inspecting analytics</h3>
+
+                <ul>
+                  <li>My users are “acquired” from direct links that I post in Canvas (educational content management system)</li>
+                  <li>My site is mostly visited on weekends</li>
+                  <li>The most popular browser people use to view my site is Google Chrome</li>
+                  <li>The most popular screen size to view my page is a desktop</li>
+                </ul>
+
+
+                <h3 class="mt-4">Findings</h3>
+                  <ul>
+                    <li><h5>Where did most of my users come from?</h5>
+                    <ul><li>
+                      Although the method for which users arrived on my site wasn’t exactly what I had assumed, my guess that most of the traffic on my website was from seattleu.instructure.com (the Canvas site of the school I attend)  was correct. The data says that 80% of my traffic is from direct sources  – meaning directly input into the browser or clicked on from the user’s bookmarks (most likely me – when I go to copy edit my weekly posts). The remaining 20% was from referrals, which were links to my page that posted on seattleu.instructure.com for my instructor.
+                      <img class="img-fluid mt-3" src="img/ga_2.png" alt="screenshot of google anylitics 'top channels' pie chart">
+                    </li></ul>
+                    </li>
+                    <li><h5 class="mt-5">What is the most popular time frame for visiting my site?</h5>
+                      <ul><li>
+                        As I suspected most of the traffic on my site seems to be on the weekends while I’m working on my weekly posts. 
+                        <img class="img-fluid mt-3" src="img/ga_5.png" alt="screenshot of google anylitics weekly timeline of users">
+                      </li></ul>
+                    </li>
+                    <li><h5 class="mt-5">What is the most popular browser that people used to view my site? </h5>
+
+                      <ul><li>
+                        Chrome did turn out to be the most used browser for visiting this site, although it was a simple assumption, since it’s the most widely used browser. However, I was surprised to see one Edge user. If I were maintaining a for-profit site, this would probably be an indication that I needed to incorporate Edge specific code (if needed) , but at the very least be aware that although the bulk of users are browsing with chrome, that may not always be the case.
+                        <img class="img-fluid mt-3" src="img/ga_4.png" alt="screenshot of google anylitics browser statistics">
+                      </li></ul>
+
+                    </li>
+                    <li><h5 class="mt-5">What is the most popular screen size people use to view my site</h5>
+                    
+                      <ul><li>
+                        As it turns out the desktop isn’t the most popular, it’s the only screen size/device that people are using to view my site. This makes sense because all of the users visiting my site are doing so for educational purposes, which is rarely done from a mobile device. 
+                        <img class="img-fluid mt-3" src="img/ga_3.png" alt="screenshot of google anylitics devices pie chart">
+                      </li></ul>
+                    </li>
+                  </ul>
+
+              </section>
+              <section>
+               <h2 class="section-heading">Conclusion</h2>
+                <p>
+                  This was an exciting start to looking at user statistics with Google Analytics. It’s unbelievable how many features and report tools that you have access to with this web app – I look forward to trying to get more users on my site so I can have a larger set of data to study. 
+                </p>
+          
+
+              </section>
+
+      </div>
+    </article>
+  </main>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://github.com/apdonaghy">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Drew Donaghy 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+  <script src="js/prism.js"></script>
+
+</body>
+
+</html>
