@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163426474-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163426474-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>User Science Journal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css " rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/prism.css" />
+</head>
+
+<body>
+  <a class="skip-to-content-link" href="#main">
+    Skip to main content
+  </a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container zIndex">
+      <a class="navbar-brand" href="index.html">Drew Donaghy</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="post1.html">Post 1</a>
+              <a class="dropdown-item" href="post2.html">Post 2</a>
+              <a class="dropdown-item" href="post3.html">Post 3</a>
+              <a class="dropdown-item" href="post4.html">Post 4</a>
+              <a class="dropdown-item" href="post5.html">Post 5</a>
+              <a class="dropdown-item" href="post6.html">Post 6</a>
+              <a class="dropdown-item" href="post7.html">Post 7</a>
+              <a class="dropdown-item" href="post8.html">Post 8</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/brainstorming.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Usability Journal Entry 8</h1>
+            <h2 class="subheading">Google Analytics Goals
+            </h2>
+            <span class="meta">Posted by
+              <a href="#">Drew Donaghy</a>
+              on May 31, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <main id="main" class="container">
+
+    <article class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <section>
+          <p>This week I’ve been experimenting with Google Analytics “goals.” These goals are
+            meant to track data on (developer specified) events. These events are similar to booleans. A developer sets
+            up an event that is connected to the functionality or essential purpose of a site and if the event is triggered
+            it equals “true” or whatever value given to it. If the majority of users went to the site and triggered the
+            event then it most likely means the developer can be confident that this feature is working. If false, they
+            may have some work to do to make the site more user friendly.</p>
+
+          <p>I would compare Google Analytics goals to conducting a user experience test without needing to recruit an
+            actual user. <strong>With Google Analytics you can simply set up a goal and then use an event to see if
+              users have met the goals that you’ve set for them. And exactly like a usability test, it’s not actually a
+              test of the user, it’s a test of the usability of the site.</strong></p>
+        </section>
+
+        <section>
+          <h2 class="section-heading">Getting Started</h2>
+
+          <p>To get a feel for how these “goals” work I set up one of my own. For a related course (intro to javascript
+            frameworks), I’m currently in the process of developing a <a
+              href="https://www.drewdonaghy.dev/wine-time/">web app</a> that allows the user to pick a suggested wine
+            based on a few preferences. I thought it would be interesting to see how usable this site is by testing how
+            often the main search button is triggered. This button is really where all of the app’s functionality
+            exists, so if it’s not being clicked then I clearly haven’t designed it very well.</p>
+
+          <img class="img-fluid mt-3" src="img/search_btn.png" alt="screenshot of the homepage of the web app I built">
+
+          <h2 class="section-heading">Goal Criteria</h2>
+
+          <p><strong>For a user to meet the criteria of my goal they would simply need to navigate to my web app and
+              click the search button on the home page,</strong> which besides the about link, is the only clickable
+            element on the page.</p>
+
+          <h2 class="section-heading">Technical details of setup</h2>
+
+          <p>Since my site was created in Vue.js, setting up my goal was a little different than configuring a goal for
+            a vanilla JS, HTML and CSS page. Luckily I found an excellent resource that helped me through the process.
+            <a href="https://medium.com/dailyjs/tips-tricks-for-vue-analytics-87a9d2838915">Article on tips and tricks
+              of vue-analytics can be found here.</a></p>
+
+          <p>
+            After installing vue-analytics and adding the import statement to my main.js file, as well as my unique
+            Google Analytics site id number, I opened the vue document that included the goal I wanted to test, in my
+            case the ‘search’ button. In the methods section of my code I created a new method I named ‘googleClick’
+            which included the same exact parameters I set up for the event in the Google Analytics UI.
+          </p>
+
+          <pre><code class="language-js"> methods: {
+  googleClick(){
+        this.$ga.event({
+            eventCategory:'mainApp',
+            eventAction:'click',
+            eventLabel:'wine_click',
+            eventValue: 1
+        })
+    }
+}
+</code></pre>
+          <figcaption class="caption text-muted">Parameters of googleClick method</figcaption>
+
+          <img class="img-fluid mt-3" src="img/ga_p.png" alt="screenshot of the homepage of the web app I built">
+          <figcaption class="caption text-muted">the same parameters in the Google Analytics user interface</figcaption>
+
+          <p>Finally, I added the event listener that triggers my ‘googleClick’ function, which updates my Google
+            Analytics data when the search button is clicked, in other words, “when my goal is met.”</p>
+
+          <pre><code class="lang-html"></code>  &ltbutton @click="googleClick" type="submit" class="form-labels"&gt
+      SEARCH
+  &lt/button&gt
+</pre>
+        </section>
+
+        <h2 class="section-heading">Conclusion</h2>
+        <p>
+          In addition to other features of Google Analytics I find this tool incredibly powerful. What’s most exciting
+          is how precise I can make the goals for my users. It really allows me to test with a whole new level of
+          specificity and flexibility without needing to set up traditional user tests. I can envision this tool being
+          invaluable to my usability testing in the future, which will ultimately help me make the sites I work on more 
+          user friendly and functional.
+        </p>
+
+      </div>
+    </article>
+
+
+
+  </main>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <a aria-label="Git-hub" href="https://github.com/apdonaghy">
+            <span class="fa-stack fa-lg centered">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <p class="copyright text-muted">Copyright &copy; Drew Donaghy 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+  <script src="js/prism.js"></script>
+</body>
+
+</html>
