@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163426474-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163426474-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>User Science Journal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css " rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/prism.css" />
+</head>
+
+<body>
+  <a class="skip-to-content-link" href="#main">
+    Skip to main content
+  </a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container zIndex">
+      <a class="navbar-brand" href="index.html">Drew Donaghy</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="post1.html">Post 1</a>
+              <a class="dropdown-item" href="post2.html">Post 2</a>
+              <a class="dropdown-item" href="post3.html">Post 3</a>
+              <a class="dropdown-item" href="post4.html">Post 4</a>
+              <a class="dropdown-item" href="post5.html">Post 5</a>
+              <a class="dropdown-item" href="post6.html">Post 6</a>
+              <a class="dropdown-item" href="post7.html">Post 7</a>
+              <a class="dropdown-item" href="post8.html">Post 8</a>
+              <a class="dropdown-item" href="post9.html">Post 9</a>
+
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/brainstorming.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Usability Journal Entry 9</h1>
+            <h2 class="subheading">Google Optimize A/B test
+            </h2>
+            <span class="meta">Posted by
+              <a href="#">Drew Donaghy</a>
+              on June 7, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <main id="main" class="container">
+
+    <article class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <section>
+          <p>This week I worked on setting up an A/B test with Google Optimize. This feature of Google Analytics is incredibly useful because it allows the developer to track the success of changes to the user interface of a web app or website. The data I got back was really helpful in visualizing the “success” of the “improvements” that I made to my app.</p>
+
+          <p>Setting up Google Optimize was a little temperamental, but once it was set up on my <a href="https://www.drewdonaghy.dev/wine-time/">wine-time app</a> I was really intrigued by how beneficial it was to have two sets of data for both versions of my app.</p>
+        </section>
+
+        <section>
+          <h2 class="section-heading">Initial ideas for A/B test</h2>
+
+          <p>Before setting up Google Optimize I thought about what variant I wanted to test on my app. Looking at it for a while, I realized that it may be slightly confusing for a new user to understand how this app works and what its purpose is. Although I prefer simplicity I also want people to understand how to use this app, so I wrote a very short sentence on the homepage of the app that provides instructions on how to use it.</p>
+
+          <img class="img-fluid mt-3" src="img/go3.png" alt="screenshot of wine-time app with added instructions statement">
+          <figcaption class="caption text-muted mb-4">Wine-time app with added instructions statement</figcaption>
+
+
+          <p>Since this was a change I wasn’t 100% sure of, I thought it would be an excellent source for an A/B test. From one perspective, adding more context and instructions to an app typically makes it easier to use, however, adding more text creates more clutter and could potentially confuse users as well. So, for my variant I decided to delete the instructions I had added to see if having them or not having them made a difference to my user statistics.</p>
+
+          <h2 class="section-heading">Setting up the A/B test</h2>
+
+          <p>My first step in setting up Google Optimize (A/B test) was to link to my Google Analytics account with my Google Analytics ID. After that I “created a new experience,” by adding the url of the site/app I wanted to test and then chose “A/B” as the type of test that I would like to conduct. At this point I added a new variant by clicking “add variant.” The default settings for the A/B test takes 100% of my users and shows 50% of them the original version and the other 50% the new variant version.</p>
+
+          <p>
+            Since I had already changed my app to include instructions, this became my “original” variant. To edit the new variant I named “deleted instructions for app”, I clicked the “edit” button next to it, which then took me to a wysiwyg editor where I deleted the container that included the text instructions for the app.
+          </p>
+
+
+          <img class="img-fluid mt-3" src="img/go4.png" alt="screenshot showing the app instructions in the wysiwyg editor provided in google optimize">
+          <figcaption class="caption text-muted mb-4">WYSIWYG editor in Google Optimize/deleting instruction text for A/B test variant</figcaption>
+
+          <img class="img-fluid mt-3" src="img/go5.png" alt="screenshot of wine-time app variant without instruction text">
+          <figcaption class="caption text-muted mb-4">Wine-time app variant without instruction text</figcaption>
+
+     
+
+          <p>Once this process was complete I needed to set up an objective for the users so I could measure the success of each version. For my objective I used a click event that I had used previously to test the effectiveness of my app. Basically the entire functionality of my app is built into the search button on the main screen of the app so If users aren’t clicking this button then they’re not using the app for its intended function. This made it the obvious choice for the objective to measure which version of the app is more effective.</p>
+          
+          <img class="img-fluid mt-3" src="img/go6.png" alt="screenshot of objective configuration in Google Optimize">
+          <figcaption class="caption text-muted mb-4">Google Optimize objective configuration screen</figcaption>
+
+
+        <h2 class="section-heading">The Data</h2>
+        <p>
+          I wasn’t too surprised by the data I’ve gotten back from my A/B test so far. The results for each variant were very similar. <strong>After two days, the original version (version with instructions) had seven views and five successful conversions (when users clicked the search button). In contrast the version without instructions had seven views and four conversions.</strong> 
+        </p>
+        <img class="img-fluid mt-3 mb-3" src="img/go7.png" alt="wine-time A/B test data 1">
+
+        <img class="img-fluid mt-3" src="img/go8.png" alt="wine-time A/B test data 2">
+        <figcaption class="caption text-muted mb-4">Google Optimize A/B test data</figcaption>
+
+        <h2 class="section-heading">Conclusion</h2>
+        <p>
+          As of right now I think it’s too soon to make a final decision on which version is more effective and currently the data isn’t dramatically skewed in one direction. My thought process is that if they continue to produce similar or close to the same conversion rates I will choose the version that I think is the most appropriate. In this case it would be the version with the instructions. Although it hasn’t yet proved to be exceedingly more effective than the second variant, I think it’s important to make it clear what the purpose of the app is to the user, even if they do understand the concept immediately. I’d be making a gross generalization if I assumed every user will understand the app instantly and if there is anything I have learned while studying usability it’s to assume nothing – ever. 
+        </p>
+
+      </div>
+    </article>
+
+
+
+  </main>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <a aria-label="Git-hub" href="https://github.com/apdonaghy">
+            <span class="fa-stack fa-lg centered">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <p class="copyright text-muted">Copyright &copy; Drew Donaghy 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+  <script src="js/prism.js"></script>
+</body>
+
+</html>
