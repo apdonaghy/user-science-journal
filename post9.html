@@ -104,28 +104,28 @@
     <article class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <section>
-          <p>This week I worked on setting up an A/B test with Google Optimize. This feature of Google Analytics is incredibly useful because it allows the developer to track the success of changes to the user interface of a web app or website. The data I got back was really helpful in visualizing the “success” of the “improvements” that I made to my app.</p>
+          <p>This week I worked on setting up an A/B test with Google Optimize. This feature of Google Analytics is incredibly useful because it allows the developer to track the success of changes to the user interface of a web app or website.</p>
 
-          <p>Setting up Google Optimize was a little temperamental, but once it was set up on my <a href="https://www.drewdonaghy.dev/wine-time/">wine-time app</a> I was really intrigued by how beneficial it was to have two sets of data for two separate versions of my app.</p>
+          <p>Setting up Google Optimize was a little temperamental, but once it was set up on my <a href="https://www.drewdonaghy.dev/wine-time/">wine-time app</a> I was really intrigued by how beneficial it was to have a set of data for two separate versions of my app.</p>
         </section>
 
         <section>
           <h2 class="section-heading">Initial ideas for A/B test</h2>
 
-          <p>Before setting up Google Optimize I thought about what variant I wanted to test on my app. Looking at it for a while, I realized that it may be slightly confusing for a new user to understand how this app works and what its purpose is. Although I prefer simplicity I also want people to understand how to use this app, so I wrote a very short sentence on the homepage of the app that provides instructions on how to use it.</p>
+          <p>Before setting up Google Optimize I thought about which variant I wanted to test on my app. While analyzing it, I realized that it may be slightly confusing for a new user to understand how this app works and what its purpose is. Although I prefer simplicity, I also want people to understand how to use this app, so I wrote a very short sentence on the homepage of the app that provides instructions on how to use it.</p>
 
           <img class="img-fluid mt-3" src="img/go3.png" alt="screenshot of wine-time app with added instructions statement">
           <figcaption class="caption text-muted mb-4">Wine-time app with added instructions statement</figcaption>
 
 
-          <p>Since this was a change I wasn’t 100% sure of, I thought it would be an excellent source for an A/B test. From one perspective, adding more context and instructions to an app typically makes it easier to use, however, adding more text creates more clutter and could potentially confuse users as well. So, for my variant I decided to delete the instructions I had added to see if having them or not having them made a difference to my user statistics.</p>
+          <p>Since I wasn’t 100% sure of this change, I thought it would be an excellent source for an A/B test. From one perspective, adding more context and instructions to an app typically makes it easier to use, however, adding more text creates more clutter and could potentially confuse users as well. So, for my variant I decided to delete the instructions I had added to see if having them or not having them made a difference to my user statistics.</p>
 
           <h2 class="section-heading">Setting up the A/B test</h2>
 
           <p>My first step in setting up Google Optimize (A/B test) was to link to my Google Analytics account with my Google Analytics ID. After that I “created a new experience,” by adding the url of the site/app I wanted to test and then chose “A/B” as the type of test that I would like to conduct. At this point I added a new variant by clicking “add variant.” The default settings for the A/B test takes 100% of my users and shows 50% of them the original version and the other 50% the new variant version.</p>
 
           <p>
-            Since I had already changed my app to include instructions, this became my “original” variant. To edit the new variant I named “deleted instructions for app”, I clicked the “edit” button next to it, which then took me to a wysiwyg editor where I deleted the container that included the text instructions for the app.
+            Since I had already changed my app to include instructions, this became my “original” variant. To edit the new variant I named “deleted instructions for app”, I clicked the “edit” button next to it, which then took me to a <a href="https://en.wikipedia.org/wiki/WYSIWYG#:~:text=In%20computing%2C%20What%20You%20See,web%20page%2C%20or%20slide%20presentation.">wysiwyg</a> editor where I deleted the container that included the text instructions for the app.
           </p>
 
 
@@ -154,7 +154,7 @@
 
         <h2 class="section-heading">Conclusion</h2>
         <p>
-          As of right now I think it’s too soon to make a final decision on which version is more effective and currently the data isn’t dramatically skewed in one direction. My thought process is that if they continue to produce similar or close to the same conversion rates I will choose the version that I think is the most appropriate. In this case it would be the version with the instructions. Although it hasn’t yet proved to be exceedingly more effective than the second variant, I think it’s important to make it clear what the purpose of the app is to the user, even if they do understand the concept immediately. I’d be making a gross generalization if I assumed every user will understand the app instantly and if there is anything I have learned while studying usability it’s to assume nothing – ever. 
+          As of right now I think it’s too soon to make a final decision on which version is more effective and currently the data isn’t dramatically skewed in one direction. Moving forward, if they continue to produce similar or close to the same conversion rates I will choose the version that I think is the most appropriate. In this case it would be the version with the instructions. Although it hasn’t yet proved to be exceedingly more effective than the second variant, I think it’s important to make it clear what the purpose of the app is to the user, even if they do understand the concept immediately. I’d be making a gross generalization if I assumed every user will understand the app instantly and if there is anything I have learned while studying usability it’s to assume nothing – ever. 
         </p>
 
       </div>
