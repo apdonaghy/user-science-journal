@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163426474-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163426474-1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>User Science Journal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css " rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/prism.css" />
+</head>
+
+<body>
+  <a class="skip-to-content-link" href="#main">
+    Skip to main content
+  </a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container zIndex">
+      <a class="navbar-brand" href="index.html">Drew Donaghy</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="post1.html">Post 1</a>
+              <a class="dropdown-item" href="post2.html">Post 2</a>
+              <a class="dropdown-item" href="post3.html">Post 3</a>
+              <a class="dropdown-item" href="post4.html">Post 4</a>
+              <a class="dropdown-item" href="post5.html">Post 5</a>
+              <a class="dropdown-item" href="post6.html">Post 6</a>
+              <a class="dropdown-item" href="post7.html">Post 7</a>
+              <a class="dropdown-item" href="post8.html">Post 8</a>
+              <a class="dropdown-item" href="post9.html">Post 9</a>
+              <a class="dropdown-item" href="post10.html">Post 10</a>
+
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/brainstorming.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Usability Journal Entry 10</h1>
+            <h2 class="subheading">Google Analytics Summary Report
+            </h2>
+            <span class="meta">Posted by
+              <a href="#">Drew Donaghy</a>
+              on June 13, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <main id="main" class="container">
+
+    <article class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <section>
+          <p>My Google Analytics “goal” for the last three weeks has been to test the effectiveness of a web app I built <a href="https://www.drewdonaghy.dev/wine-time/">(wine-time)</a> by tracking clicks on the app’s main button, the search button. I decided to use this click event as my metric of success because If users aren’t clicking this button to render a customizable list of recommended wines then they’re not using the app for its intended purpose – for this reason it was an obvious choice as the goal for testing the app.</p>
+        </section>
+
+        <section>
+          <h2 class="section-heading">Google Analytics goal tracking – set up</h2>
+
+          <p>My web app was created in Vue.js, which made setting up my Google Analytics goal slightly different than configuring a goal for a vanilla JS, HTML and CSS page. I was fortunate to find an excellent resource that helped me through the process. <a href="https://medium.com/dailyjs tips-tricks-for-vue-analytics-87a9d2838915">Article on tips and tricks of vue-analytics can be found here.</a></p>
+
+          <p>
+            After installing vue-analytics and adding the import statement to my main.js file, as well as my unique Google Analytics site id number, I opened the vue document that included the goal I wanted to test, in my case the ‘search’ button. In the methods section of this template, I created a new method named  ‘googleClick’ which included the same exact parameters I set up for the event in the Google Analytics UI.
+          </p>
+
+          <pre><code class="language-js"> methods: {
+  googleClick(){
+        this.$ga.event({
+            eventCategory:'mainApp',
+            eventAction:'click',
+            eventLabel:'wine_click',
+            eventValue: 1
+        })
+    }
+}
+</code></pre>
+          <figcaption class="caption text-muted">Parameters of googleClick method</figcaption>
+
+          <img class="img-fluid mt-3" src="img/ga_p.png" alt="screenshot of Google Analytics goal parameters">
+          <figcaption class="caption text-muted">the same parameters in the Google Analytics user interface</figcaption>
+
+          <p>To finish, I added the event listener that triggers my ‘googleClick’ function, which updates my Google Analytics data when the search button is clicked.</p>
+
+          <pre><code class="lang-html"></code>  &ltbutton @click="googleClick" type="submit" class="form-labels"&gt
+      SEARCH
+  &lt/button&gt
+</pre>
+        </section>
+
+        <section>
+          <h2 class="section-heading">A/B test experiment</h2>
+
+          <p>To elaborate on my original “goal experiment” and to gather even more refined data I used Google Optimize to set up an A/B test (a technique which tests two versions of an app or website to determine which version is more successful based on the comparison of data).</p>
+
+          <p>
+            Before setting up my Google Optimize A/B test I considered which type of variant could produce the most interesting data. After analyzing the app I realized that it may be slightly confusing for a new user to understand how it works. <strong>Although I prefer simplicity, I also want users to understand how to use this app</strong>, so I wrote a short introduction on the homepage that provides instructions on how to use it. The message reads, “Select a wine and your max-price <strong>per bottle</strong>, then search to see a list of recommended wines.”
+          </p>
+
+        
+
+          <img class="img-fluid mt-3" src="img/ga_home.png" alt="screenshot of wine-time app with added instructions statement">
+          <figcaption class="caption text-muted mb-4">Wine-time app with added instructions statement</figcaption>
+
+
+          <p>Since I wasn’t 100% sure of this change, I thought it would be an excellent source for an A/B test. From one perspective, adding more context and instructions to an app typically makes it easier to use, however, adding more text creates more visual clutter and could potentially confuse users as well. So, for my variant I decided to delete the instructions I had added to see if having them or not having them made a difference to my user statistics.</p>
+
+          <h2 class="section-heading">Setting up the A/B test</h2>
+
+          <p>My first step in setting up Google Optimize (A/B test) was to link to my Google Analytics account with my Google Analytics ID. After that I “created a new experience,” by adding the url of the site/app I wanted to test and then chose “A/B” as the type of test that I would like to conduct. At this point I added a new variant by clicking “add variant.” The default settings for the A/B test takes 100% of my users and shows 50% of them the original version and the other 50% the new variant version.</p>
+
+          <p>
+            Since I had already changed my app to include instructions, this became my “original” variant. To edit the new variant I named “deleted instructions for app”, I clicked the “edit” button next to it, which then took me to a <a href="https://en.wikipedia.org/wiki/WYSIWYG#:~:text=In%20computing%2C%20What%20You%20See,web%20page%2C%20or%20slide%20presentation.">wysiwyg</a> editor where I deleted the container that included the text instructions for the app.
+          </p>
+
+
+          <img class="img-fluid mt-3" src="img/go4.png" alt="screenshot showing the app instructions in the wysiwyg editor provided in google optimize">
+          <figcaption class="caption text-muted mb-4">WYSIWYG editor in Google Optimize/deleting instruction text for A/B test variant</figcaption>
+
+          <img class="img-fluid mt-3" src="img/go5.png" alt="screenshot of wine-time app variant without instruction text">
+          <figcaption class="caption text-muted mb-4">Wine-time app variant without instruction text</figcaption>
+
+     
+
+          <p>Once this process was complete I set up an objective for the users so I could measure the success of each version. For my objective I used the click event (search button) that I had used as my original goal for determining the effectiveness of the app.</p>
+          
+          <img class="img-fluid mt-3" src="img/go6.png" alt="screenshot of objective configuration in Google Optimize">
+          <figcaption class="caption text-muted mb-4">Google Optimize objective configuration screen</figcaption>
+
+
+        <h2 class="section-heading">The Data</h2>
+        <p>
+          About a week and a half into my A/B test my results are very similar to the data that I collected on day two. Two days into data collection, I had had seven views and five successful conversions (when users clicked the search button) for variant 1 (version with the instructions) and seven views and four conversions for variant 2 (version without instructions). On day eight I had eight views and five successful conversions for variant 1 and 17 views for variant 2 with 10 conversions. 
+        </p>
+        <p>
+          The calculated conversion rate changed moderately during the six days between collecting the data. Variant 1 went from a 71% conversion rate to a 62% conversion rate, whereas variant 2 went from a 57% conversion rate to a 59% conversion rate. 
+        </p>
+        <img class="img-fluid mt-3 mb-3" src="img/go_data_2.png" alt="wine-time A/B test data 1">
+
+        <img class="img-fluid mt-3" src="img/go_data3.png" alt="wine-time A/B test data 2">
+        <figcaption class="caption text-muted mb-4">Google Optimize A/B test data(day 8)</figcaption>
+
+        <p>
+          Even with the data suggesting that the conversion rate of variant 1 is dropping and the conversion rate of version 2 is rising, at the moment it’s not extreme enough to convince me that I should use version 2. If they continue to have a similar conversion rate I believe that version 1 (with the added instructions) is the correct choice, as <strong>there is rarely a drawback to adding context and clarity to an application interface.</strong>
+        </p>
+
+
+        <p>
+          For the first time while studying usability, I’m not surprised by the data collected from this experiment. Which actually says a lot about usability testing. If done correctly, more often than not, I end up surprised by the data and convinced to make an adjustment to a feature that I made based on my own assumption of “what most people like.” <strong>From my usability testing, I'm consistently learning one important lesson, my assumptions are mostly incorrect.</strong> I really have no idea what “most people like,” so experimenting with usability tests and Google analytics is the most effective way of solving U/I and U/X problems. 
+        </p>
+        <p>
+          Ultimately, I think this may be a unique circumstance because this app is so simple that it doesn’t necessarily need added instructions, which is why both variants have a similar conversion rate.
+        </p>
+
+        <h2 class="section-heading">Next Steps</h2>
+        <p>
+          My next steps in developing this web app would be to consider how to make the app’s function instantly perceivable – without a millisecond of extra thought. If designed properly there would be no learning curve at all. How would it be possible to do this? Testing and then more testing. I think making subtle changes and using an A/B test to collect data would be an excellent way to move forward, as well as traditional usability testing. I also think it’s important to continue to run usability tests throughout the lifecycle of all web projects. Unlike the print world, websites can constantly evolve and so do the tastes of the users, so something that works this year may feel out of date next year. 
+        </p>
+
+        <h2 class="section-heading">Conclusion</h2>
+        <p>
+          I’ve mentioned this before, but Google Analytics’ tools have reinforced my belief that usability testing is an excellent exercise in letting go of your preconceived notions about users. From my own perspective, it’s incredibly difficult to design the physical look and logical flow of an app or website while being objective. <strong>At its core, any creative process is subjective.</strong> It’s not wrong to design and develop for yourself first, but at some juncture in the project’s creation there should be an outside perspective and Google Analytics is a great place to start. If collected and reviewed without bias, Google Analytics gives the web developer pure, objective data. To me, there isn’t anything in user science that is more valuable than objective data, because it allows the developer to create experiences for every user as opposed to one. 
+        </p>
+
+
+
+
+      </div>
+    </article>
+
+
+
+  </main>
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <a aria-label="Git-hub" href="https://github.com/apdonaghy">
+            <span class="fa-stack fa-lg centered">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <p class="copyright text-muted">Copyright &copy; Drew Donaghy 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+  <script src="js/prism.js"></script>
+</body>
+
+</html>
