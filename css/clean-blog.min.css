@@ -36,3 +36,7 @@
     font-size: .8em;
   
   }
+.post-preview{
+  display:block;
+  text-align: center;
+}
